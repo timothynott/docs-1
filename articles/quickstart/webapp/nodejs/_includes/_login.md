@@ -1,4 +1,4 @@
-## Install the Middleware Dependencies
+## Integrate Auth0 in your application
 
 Install the necessary middleware.
 
@@ -66,15 +66,6 @@ Add a route called `/login`. Use the `env` object to set the following propertie
 * Callback URL
 
 The route creates an instance of the `auth0.WebAuth` object. Then, the route calls the `authorize` method and redirects the user to the login page.
-
-You need to make sure you get an OIDC-conformant response. You can achieve it two ways:
-* set the audience. 
-* turn on the **OIDC conformant** switch in your Auth0 dashboard. 
-
-::: note
-The example below shows how to set the audience to get an OIDC-conformant response. 
-To turn on the **OIDC conformant** switch, in your [Application Settings](${manage_url}/#/applications/${account.applicationId}/settings), click on **Show Advanced Settings** > **OAuth**. To learn more, read the [new flows documentation](/api-auth/intro#how-to-use-the-new-flows).
-:::
 
 ```js
 // routes/index.js
